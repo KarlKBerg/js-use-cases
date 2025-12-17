@@ -17,8 +17,8 @@ let userRegistered = true;
 
 // Simple condition check
 if (userAge >= votingAge) {
-  // >= checks if userAge is more or equal to votingAge
-  console.log("You are old enough to vote!"); // Displayed if userAge is more or equal to votingAge
+  // >= checks if userAge is greater than or equal to votingAge
+  console.log("You are old enough to vote!"); // Displayed if userAge is greather than or equal to votingAge
 } else {
   console.log("You are not old enough to vote!"); // Displayed if userAge is less than votingAge
 }
@@ -39,7 +39,7 @@ if (userAge >= votingAge && userRegistered) {
 
 // Checks if any conditions are equal to day(monday)
 switch (day) {
-  case "Monday":
+  case "Monday": // Matches because strings are case-sensitive and day is "Monday"
     console.log("It's the start of the week!");
     break;
   case "Friday":
