@@ -61,3 +61,29 @@ while (randomNumber <= 8) {
 console.log(
   "Success! We got a number greater than 8 in " + attempts + " attempts."
 );
+
+/* ===========
+    DO-WHILE LOOP
+    ========== */
+
+/*
+    Will be executed at least once, condition is checked after the loop has run once.   
+*/
+
+let a = 10; // Initializer
+
+do {
+  // Do this first
+  console.log("The value of a is: " + a);
+  a++;
+} while (a < 5); // Will be terminated after running once since a is more than 5 (11)
+
+/* =========
+    SUMMARY
+    ======== */
+
+/*
+    - Use a for loop when you know how many times you want to iterate (e.g., “count from 1 to 10”, “process the first 5 items”).
+    - Use a while loop when the number of iterations is unknown and depends on a condition being met (e.g., “keep running until the user quits”, “continue until a random value is found”).
+    - Use a do...while loop when you need the loop to run at least once, regardless of the condition.
+*/
