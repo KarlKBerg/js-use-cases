@@ -35,3 +35,27 @@ greetUser("Charlie", (message) => {
 /* ==========
     ANONYMOUS FUNCTIONS
     ========= */
+// An anonymous function assigned to a variable
+const add = function (a, b) {
+  return a + b;
+};
+console.log("Sum using anonymous function: " + add(5, 3)); // Outputs: Sum using anonymous function: 8
+
+// An anonymous arrow function assigned to a variable
+const multiply = (a, b) => a * b;
+console.log("Product using arrow function: " + multiply(5, 3)); // Outputs: Product using arrow function: 15
+
+/* ==========
+    PASSING FUNCTIONS AS ARGUMENTS
+    ========= */
+// A function that processes two numbers using a provided operation function
+function processNumbers(num1, num2, operation) {
+  return operation(num1, num2); // Call the operation function with num1 and num2
+}
+
+// Using processNumbers with different operations
+const sumResult = processNumbers(10, 20, (a, b) => a + b);
+console.log("Sum result: " + sumResult); // Outputs: Sum result: 30
+
+const productResult = processNumbers(10, 20, (a, b) => a * b);
+console.log("Product result: " + productResult); // Outputs: Product result: 200
