@@ -4,6 +4,9 @@ Use case for:
 - anonymous functions
 - anonymous arrow functions
 - passing functions as arguments
+- .forEach() method
+- .map() method
+- .filter() method
 */
 
 /* ==========
@@ -59,3 +62,36 @@ console.log("Sum result: " + sumResult); // Outputs: Sum result: 30
 
 const productResult = processNumbers(10, 20, (a, b) => a * b);
 console.log("Product result: " + productResult); // Outputs: Product result: 200
+
+// Methods (.forEach, .map, .filter) that use callback functions
+
+/* ==========
+    .forEach() METHOD
+    ========= */
+// Using .forEach() to iterate over an array
+const fruits = ["apple", "banana", "cherry"];
+fruits.forEach(function (fruit, index) {
+  console.log("Fruit " + index + ": " + fruit);
+});
+// Outputs:
+// Fruit 0: apple
+// Fruit 1: banana
+// Fruit 2: cherry
+
+/* ==========
+    .map() METHOD
+    ========= */
+// Using .map() to create a new array with modified values
+const numbers = [1, 2, 3, 4, 5];
+const squaredNumbers = numbers.map((num) => num * num);
+console.log("Squared Numbers: " + squaredNumbers); // Outputs: Squared Numbers: 1,4,9,16,25
+
+/* ==========
+    .filter() METHOD
+    ========= */
+// Using .filter() to create a new array with elements that meet a condition
+const mixedNumbers = [10, 15, 20, 25, 30];
+const evenNumbers = mixedNumbers.filter(function (num) {
+  return num % 2 === 0; // Keep only even numbers
+});
+console.log("Even Numbers: " + evenNumbers); // Outputs: Even Numbers: 10,20,30
