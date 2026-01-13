@@ -7,6 +7,7 @@ Use case for:
 - .forEach() method
 - .map() method
 - .filter() method
+- .find() method
 */
 
 /* ==========
@@ -95,3 +96,15 @@ const evenNumbers = mixedNumbers.filter(function (num) {
   return num % 2 === 0; // Keep only even numbers
 });
 console.log("Even Numbers: " + evenNumbers); // Outputs: Even Numbers: 10,20,30
+
+/* ==========
+    .find() METHOD
+    ========= */
+// Using .find() to locate the first element that meets a condition
+const people = [
+  { name: "John", age: 28 },
+  { name: "Jane", age: 22 },
+  { name: "Jim", age: 32 },
+];
+const personOver30 = people.find((person) => person.age > 30);
+console.log("Person over 30: " + JSON.stringify(personOver30)); // Outputs: Person over 30: {"name":"Jim","age":32}
