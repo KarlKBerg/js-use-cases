@@ -95,3 +95,69 @@ const entries2 = Object.entries(person2);
 entries2.forEach(([key, value]) => {
   console.log("Key:", key, "| Value:", value);
 });
+
+// More on deconstructing
+const { property1, property2 } = myObject;
+// is equivalent to
+/*
+ const property1 = myObject.property1;
+ const property2 = myObject.property2;
+*/
+// Example:
+const person3 = {
+  firstName: "Alice",
+  age: 30,
+};
+
+// Destructuring assignment
+const { firstName, age } = person3;
+
+console.log(firstName); // "Alice"
+console.log(age); // 30
+
+// Destructuring in function parameters
+function displayPerson({ firstName, age }) {
+  console.log(`Name: ${firstName}, Age: ${age}`);
+}
+
+// Call the function with an object
+displayPerson(person3); // Outputs: Name: Alice, Age: 30
+
+// renaming variables during destructuring
+const person4 = {
+  firstName: "Bob",
+  age: 25,
+};
+
+// Destructuring with renaming
+const { firstName: name, age: years } = person4;
+
+console.log(name); // "Bob"
+console.log(years); // 25
+
+// Destructuring in function parameters with renaming
+function displayPersonRenamed({ firstName: name, age: years }) {
+  console.log(`Name: ${name}, Age: ${years}`);
+}
+
+// Call the function with an object
+displayPersonRenamed(person4); // Outputs: Name: Bob, Age: 25
+
+// providing default values during destructuring
+const person5 = {
+  firstName: "Charlie",
+};
+
+// Destructuring with default value
+const { firstName: fname, age: userAge = 18 } = person5;
+
+console.log(fname); // "Charlie"
+console.log(userAge); // 18
+
+// Destructuring in function parameters with default values
+function displayPersonDefault({ firstName: fname, age: userAge = 18 }) {
+  console.log(`Name: ${fname}, Age: ${userAge}`);
+}
+
+// Call the function with an object
+displayPersonDefault(person5); // Outputs: Name: Charlie, Age: 18
