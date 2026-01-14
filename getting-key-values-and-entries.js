@@ -55,3 +55,15 @@ console.log("Total cost:", totalCost); // 1300
 const userEntries = Object.entries(user);
 console.log("User Entries:", userEntries);
 // Outputs: User Entries: [ [ 'name', 'John Doe' ], [ 'age', 30 ], [ 'profession', 'Developer' ] ]
+
+// Iterating over entries using for...in loop
+const person = {
+  name: "Alice",
+  age: 30,
+  city: "London",
+};
+
+for (const propertyKey in person) {
+  const propertyValue = person[propertyKey];
+  console.log("Key:", propertyKey, "| Value:", propertyValue);
+}
