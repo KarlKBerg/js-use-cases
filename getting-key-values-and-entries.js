@@ -237,3 +237,58 @@ rgbEntries.forEach(([index, value]) => {
 // Index: 0, Value: 255
 // Index: 1, Value: 200
 // Index: 2, Value: 150
+
+/* ==========
+    The spread operator
+    ========= */
+
+const originalFruits = ["apple", "banana", "cherry"];
+
+// Spreading the elements of originalFruits into a new array
+const copiedFruits = [...originalFruits];
+
+console.log(copiedFruits); // ["apple", "banana", "cherry"]
+console.log(originalFruits === copiedFruits); // false (They are two separate arrays)
+
+// Merging two arrays using the spread operator
+const fruits = ["apple", "banana"];
+const vegetables = ["carrot", "broccoli"];
+
+// Create a new array by spreading both arrays into it
+const food = [...fruits, ...vegetables];
+console.log(food); // ["apple", "banana", "carrot", "broccoli"]
+
+// Add an element at the beginning
+const moreFood = ["nuts", ...food];
+console.log(moreFood); // ["nuts", "apple", "banana", "carrot", "broccoli"]
+
+// Spread operator with objects
+const personA = {
+  name: "David",
+  age: 28,
+};
+
+const personB = {
+  profession: "Designer",
+  country: "USA",
+};
+
+// Create a new object by spreading properties of personA and personB
+const mergedPerson = { ...personA, ...personB };
+console.log(mergedPerson);
+// Outputs: { name: 'David', age: 28, profession: 'Designer', country: 'USA' }
+
+// Overriding properties while merging
+const updatedPerson = { ...personA, age: 29, country: "USA" };
+console.log(updatedPerson);
+// Outputs: { name: 'David', age: 29, country: 'USA' }
+
+// Spread operator in function calls
+function displayDetails(name, age, profession) {
+  console.log(`Name: ${name}, Age: ${age}, Profession: ${profession}`);
+}
+
+const details = ["Eva", 32, "Architect"];
+
+// Using spread operator to pass array elements as arguments
+displayDetails(...details); // Outputs: Name: Eva, Age: 32, Profession: Architect
