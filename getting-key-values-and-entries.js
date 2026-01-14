@@ -224,3 +224,16 @@ function displayScoresWithRest([firstScore, secondScore, ...remainingScores]) {
 
 // Call the function with an array
 displayScoresWithRest(scores); // Outputs: First Score: 45, Second Score: 50, Remaining Scores: 55,60,65
+
+// destructuring with Object.entries() for arrays
+const rgb = [255, 200, 150];
+
+const rgbEntries = Object.entries(rgb);
+
+rgbEntries.forEach(([index, value]) => {
+  console.log(`Index: ${index}, Value: ${value}`);
+});
+// Outputs:
+// Index: 0, Value: 255
+// Index: 1, Value: 200
+// Index: 2, Value: 150
