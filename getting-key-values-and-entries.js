@@ -83,7 +83,7 @@ entries.forEach((entry) => {
   console.log("Key:", key, "| Value:", value);
 });
 
-// Destructuring in forEach loop
+// Destructuring in forEach loop (Cleaner syntax)
 const person2 = {
   name: "Alice",
   age: 30,
