@@ -204,3 +204,23 @@ function displayTopScores([gold, , silver, , bronze]) {
 
 // Call the function with an array
 displayTopScores(topScores); // Outputs: Gold: 100, Silver: 95, Bronze: 85
+
+// Destructuring with rest operator
+const scores = [45, 50, 55, 60, 65];
+
+// Destructuring with rest operator
+const [firstScore, secondScore, ...remainingScores] = scores;
+
+console.log("First Score:", firstScore); // 45
+console.log("Second Score:", secondScore); // 50
+console.log("Remaining Scores:", remainingScores); // [55, 60, 65]
+
+// Destructuring in function parameters with rest operator
+function displayScoresWithRest([firstScore, secondScore, ...remainingScores]) {
+  console.log(
+    `First Score: ${firstScore}, Second Score: ${secondScore}, Remaining Scores: ${remainingScores}`
+  );
+}
+
+// Call the function with an array
+displayScoresWithRest(scores); // Outputs: First Score: 45, Second Score: 50, Remaining Scores: 55,60,65
