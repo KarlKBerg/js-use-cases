@@ -68,7 +68,7 @@ for (const propertyKey in person) {
   console.log("Key:", propertyKey, "| Value:", propertyValue);
 }
 
-// iterating over entries using forEach()
+// iterating over entries using forEach() (More modern approach)
 const person1 = {
   name: "Alice",
   age: 30,
@@ -80,5 +80,18 @@ const entries = Object.entries(person1);
 entries.forEach((entry) => {
   const key = entry[0];
   const value = entry[1];
+  console.log("Key:", key, "| Value:", value);
+});
+
+// Destructuring in forEach loop
+const person2 = {
+  name: "Alice",
+  age: 30,
+  city: "London",
+};
+
+const entries2 = Object.entries(person2);
+
+entries2.forEach(([key, value]) => {
   console.log("Key:", key, "| Value:", value);
 });
