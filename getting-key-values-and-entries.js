@@ -32,7 +32,7 @@ console.log("Has all required fields:", hasAllFields); // Outputs: Has all requi
 const userValues = Object.values(user);
 console.log("User Values:", userValues); // Outputs: User Values: [ 'John Doe', 30, 'Developer' ]
 
-// Adding items in shopping cart
+// calculating total price in shopping cart
 const shoppingCart = {
   laptop: 1200,
   mouse: 25,
