@@ -67,3 +67,18 @@ for (const propertyKey in person) {
   const propertyValue = person[propertyKey];
   console.log("Key:", propertyKey, "| Value:", propertyValue);
 }
+
+// iterating over entries using forEach()
+const person1 = {
+  name: "Alice",
+  age: 30,
+  city: "London",
+};
+
+const entries = Object.entries(person1);
+
+entries.forEach((entry) => {
+  const key = entry[0];
+  const value = entry[1];
+  console.log("Key:", key, "| Value:", value);
+});
