@@ -32,6 +32,21 @@ console.log("Has all required fields:", hasAllFields); // Outputs: Has all requi
 const userValues = Object.values(user);
 console.log("User Values:", userValues); // Outputs: User Values: [ 'John Doe', 30, 'Developer' ]
 
+// Adding items in shopping cart
+const shoppingCart = {
+  laptop: 1200,
+  mouse: 25,
+  keyboard: 75,
+};
+
+const prices = Object.values(shoppingCart); // [1200, 25, 75]
+let totalCost = 0;
+
+prices.forEach((price) => {
+  totalCost += price;
+});
+
+console.log("Total cost:", totalCost); // 1300
 /* ==========
     .Object.entries()
     ========= */
