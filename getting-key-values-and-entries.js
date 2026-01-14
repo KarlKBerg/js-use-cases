@@ -83,6 +83,10 @@ entries.forEach((entry) => {
   console.log("Key:", key, "| Value:", value);
 });
 
+/* ==========
+    Destructuring objects
+    ========= */
+
 // Destructuring in forEach loop (Cleaner syntax)
 const person2 = {
   name: "Alice",
@@ -161,3 +165,42 @@ function displayPersonDefault({ firstName: fname, age: userAge = 18 }) {
 
 // Call the function with an object
 displayPersonDefault(person5); // Outputs: Name: Charlie, Age: 18
+
+/* ==========
+    Destructuring for arrays
+    ========= */
+
+const highScores = [98, 95, 92, 88, 85];
+
+// Destructuring assignment
+const [firstPlace, secondPlace, thirdPlace] = highScores;
+
+console.log("First place:", firstPlace); // 98
+console.log("Second place:", secondPlace); // 95
+console.log("Third place:", thirdPlace); // 92
+
+// Destructuring in function parameters
+function displayScores([first, second, third]) {
+  console.log(`1st: ${first}, 2nd: ${second}, 3rd: ${third}`);
+}
+
+// Call the function with an array
+displayScores(highScores); // Outputs: 1st: 98, 2nd: 95, 3rd: 92
+
+// Skipping elements during destructuring
+const topScores = [100, 98, 95, 90, 85];
+
+// Destructuring with skipping
+const [gold, , silver, , bronze] = topScores;
+
+console.log("Gold:", gold); // 100
+console.log("Silver:", silver); // 95
+console.log("Bronze:", bronze); // 85
+
+// Destructuring in function parameters with skipping
+function displayTopScores([gold, , silver, , bronze]) {
+  console.log(`Gold: ${gold}, Silver: ${silver}, Bronze: ${bronze}`);
+}
+
+// Call the function with an array
+displayTopScores(topScores); // Outputs: Gold: 100, Silver: 95, Bronze: 85
